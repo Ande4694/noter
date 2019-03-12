@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Spank-bank</title>
+</head>
+<body>
+<h3>Skriv alle dine tossede noter</h3>
+<a href="/makeNote">opret note</a>
+<table id="myTable">
+
+    <thead>
+    <tr class="header">
+        <th>Note</th>
+        <th>Last changed</th>
+        <th>edit</th>
+
+    </tr>
+    </thead>
+<tbody id="myTable2">
+<tr th:each="alleNoter: ${alleNoter}">
+
+
+
+    <td th:text="${alleNoter.note}"/>
+    <td th:text="${alleNoter.lastChanged}"/>
+
+    <td>
+
+
+
+                <a th:href="${'updateNote/' + alleNoter.id}">
+                    Update</button>
+                </a>
+
+    </td>
+
+
+
+
+
+</tr>
+</table>
+</body>
+
+</html>

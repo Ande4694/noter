@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>update your note</title>
+</head>
+<body>
+<form method="post" action="/updateNote">
+
+
+<textarea th:text="${update.note}" rows="4" cols="50" name="note">
+
+</textarea>
+    <input type="submit"value="save note">
+
+</form>
+</body>
+</html>
